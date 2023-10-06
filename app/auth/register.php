@@ -17,9 +17,9 @@
             <input type="password" name="password" required>
             
             <label for="email">Email:</label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" required="" style="margin-bottom: 10px; height: 28px; width: 100%; border-radius: 1px;">
             
-            <input type="submit" value="Sign Up">
+            <input type="submit" value="Sign Up" style="margin-top: 10px; width: 102%; height: 45px;">
         </form>
     </div>
 </body>

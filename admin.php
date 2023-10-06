@@ -55,6 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt = $mysqli->prepare($insert_query);
             $stmt->bind_param("sds", $product_name, $product_price, $product_image);
             $stmt->execute();
+            header("Location: ./admin.php");
         } elseif ($action === 'update') {
             // Handle product update
             $product_id = $_POST['product_id'];
@@ -66,6 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt = $mysqli->prepare($update_query);
             $stmt->bind_param("sdsi", $product_name, $product_price, $product_image, $product_id);
             $stmt->execute();
+            header("Location: ./admin.php");
         } elseif ($action === 'delete') {
             // Handle product deletion
             $product_id = $_POST['product_id'];
@@ -74,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt = $mysqli->prepare($delete_query);
             $stmt->bind_param("i", $product_id);
             $stmt->execute();
+            header("Location: ./admin.php");
         }
     }
 }

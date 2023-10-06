@@ -145,15 +145,15 @@ foreach ($_SESSION['cart'] as $item) {
                     if (isset($_SESSION['user_id'])) {
                         // User is logged in, display a logout button
                         echo '<li class="nav-item">';
-                        echo '<a class="nav-link" href="./app/controllers/logout.php">Logout</a>';
+                        echo '<a class="nav-link" href="../../app/controllers/logout.php">Logout</a>';
                         echo '</li>';
                     } else {
                         // User is not logged in, display login and signup links
                         echo '<li class="nav-item">';
-                        echo '<a class="nav-link" href="./app/auth/login.php">Login</a>';
+                        echo '<a class="nav-link" href="../../app/auth/login.php">Login</a>';
                         echo '</li>';
                         echo '<li class="nav-item">';
-                        echo '<a class="nav-link" href="./app/auth/register.php">Sign Up</a>';
+                        echo '<a class="nav-link" href="../../app/auth/register.php">Sign Up</a>';
                         echo '</li>';
                     }
                     ?>
@@ -165,7 +165,7 @@ foreach ($_SESSION['cart'] as $item) {
     <div class="container">
         <!-- Shopping cart -->
         <div class="row mt-5" id="cart">
-            <div class="col-md-6">
+            <div class="col-md-6" style="margin: 0 25%">
                 <h2>Shopping Cart</h2>
                 <?php
                 if (count($_SESSION['cart']) > 0) {
